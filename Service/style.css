@@ -1,0 +1,271 @@
+* {
+    margin: 0 auto;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    height: 5.5rem;
+    background-color: #3d1a0b;
+    
+}
+
+.img_logo {
+    margin: 0;
+    width: 20rem;
+}
+
+.navbar {
+    width: 80%;
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
+}
+
+.navbar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+.navbar a:active {
+    font-weight: 650;
+    color: #4d4d4d;
+}
+
+.page1{
+    margin-top: 5rem;
+    padding: 5rem 0 0 0;
+    display: flex;
+    height: 78vh;
+    background: linear-gradient(rgba(114, 45, 8, 0.499), rgba(62, 30, 9, 0.598)), url("../images/photo.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    color: #fff;
+    font-size: 36px;
+}
+
+.contain {
+    width: 50%;
+    margin: 0;
+    padding: 0 20rem;
+    height: fit-content;
+}
+
+.contain h1 {
+    font-size: 98px;
+}
+
+.contain h2 {
+    font-weight: 100;
+}
+
+.contain hr {
+    margin: 0.5rem 0;
+    border: 3px dotted #b85300;
+    border-style: none none dotted; 
+    color: #fff; 
+}
+.contain p {
+    margin-top: 1rem;
+    font-size: 16px;
+}
+
+.images{
+    display: flex;
+    font-size: 18px;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.img {
+    margin: 0;
+    margin-right: 8rem;
+}
+
+.tools {
+    width: 90px;
+    margin: 0;
+}
+
+.master_call_btn {
+    background-color: #b85300;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    width: 190px;
+    height: 51px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.page2{
+    height: 450px;
+    display: flex;
+    height: 78vh;
+    background: linear-gradient(rgba(89, 52, 33, 0.499), rgba(62, 30, 9, 0.598)), url("../images/1.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    color: #fff;
+    font-size: 36px;
+}
+
+.contain_page2 {
+    padding: 0 0 0 20rem;
+    margin: 0;
+    margin-top: 3rem;
+}
+
+.contain_page2 h1:first-child {
+    color: #d9d9d9;;
+    font-size: 63px;
+}
+
+.img_how_it_works {
+    width: 800px;
+    margin: 0 0 0 30rem;
+}
+
+.page3{
+    height: 450px;
+    display: flex;
+    height: 60vh;
+    background: linear-gradient(rgba(75, 34, 14, 0.867), rgba(39, 18, 4, 0.834)), url("../images/1.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    color: #fff;
+}
+.contain_page3 {
+    margin: 0;
+    padding-left: 20rem;
+}
+
+.services {
+    display: flex;
+    margin-top: 5rem;
+}
+ 
+.contain_page3 h1{
+    font-size: 68px;
+}
+.contain_page3 h1:first-child {
+    color: #d9d9d9;;
+    font-size: 63px;
+}
+
+.services > * {
+    margin-right: 10rem;
+    width: 300px;
+}
+.services hr {
+    height: 2px;
+    background-color: #fff;
+    width: 100px;
+    margin: 0;
+    margin: .4rem 0;
+}
+
+.services p {
+    font-size: 16px;
+    color: #bdbdbd;
+}
+
+.dotted {
+    height: 10px;
+    border: 2px solid #b85300;
+    border-style: dashed solid;
+    width: 800px;
+    margin: 0;
+
+}
+
+.page4{
+    padding-top: 3rem;
+    height: 450px;
+    display: flex;
+    height: 50vh;
+    background: linear-gradient(rgba(75, 34, 14, 0.748), rgba(39, 18, 4, 0.643)), url("../images/kitchen.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    color: #fff;
+}
+.page4 .contain_page3 h1:first-child {
+    color: #d9d9d9;;
+    font-size: 54px;
+}
+
+.page4 .services p {
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+.form-control {
+    background-color: transparent;
+    border: 2px solid #b85300;
+    border-radius: 5px;
+    width: 250px;
+    height: 45px;
+    font-size: 18px;
+}
+
+.page5 {
+    background-color: #3d1a0b;
+    text-align: center;
+    color: #fff;
+}
+
+.page5 > * {
+    margin-bottom: 2rem;
+}
+
+.line5 {
+    margin-bottom: 0;
+}
+.line1{
+    display: flex;
+    align-items: start;
+}
+
+
+
+
+
+footer {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+footer li {
+    display: inline;
+    margin: 0;
+    margin: 0 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}

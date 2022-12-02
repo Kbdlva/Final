@@ -1,0 +1,169 @@
+* {
+    margin: 0 auto;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    height: 5.5rem;
+    background-color: #fff;
+}
+
+.img_logo {
+    margin: 0;
+    width: 20rem;
+}
+
+.navbar {
+    width: 80%;
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
+}
+
+.navbar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 1rem;
+}
+
+.navbar a:active {
+    font-weight: 650;
+    color: #4d4d4d;
+}
+
+.title_div {
+    margin-top: 5rem;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(35, 63, 90, 0.5), rgba(6, 6, 6, 0.1)), url("./images/coffee-machine.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+}
+
+.our_devices {
+    background-color: #ededed;
+}
+
+.wrapper {
+    width: 80%;
+    background-color: #fff;
+}
+
+.wrapper:first-child {
+    padding-top: 3rem;
+}
+
+.devs {
+    display: flex;
+}
+
+.description {
+    text-align: center;
+    color: #4d4d4d;
+    font-weight: 200;
+
+}
+
+.description>* {
+    margin-bottom: 2rem;
+}
+
+.img_dev {
+    width: 600px;
+}
+
+.more_info {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    height: 400px;
+    margin-top: 6rem;
+}
+
+.more_info h3 {
+    font-weight: 200;
+}
+
+.more_info p {
+    font-weight: 200;
+}
+
+.price {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+}
+
+.price form {
+    display: flex;
+    margin-top: 4rem
+}
+
+.price input {
+    height: 50px;
+    width: 300px;
+    margin-right: 1rem;
+    padding-left: 2rem;
+}
+
+.price input::placeholder {
+    font-size: 16px;
+}
+
+.price_btn {
+    background-color: #000;
+    color: #fff;
+    width: 150px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+footer {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+
+    height: 50px;
+}
+
+/* footer ul {
+    justify-content: center;
+} */
+
+footer li {
+    display: inline;
+    margin: 0;
+    margin: 0 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
