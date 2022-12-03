@@ -11,13 +11,14 @@
     width: 100%;
     align-items: center;
     height: 5.5rem;
-    background-color: #3d1a0b;
-    
+    background-color: #000;
+
 }
 
 .img_logo {
     margin: 0;
     width: 20rem;
+    border: 1px solid #fff;
 }
 
 .navbar {
@@ -52,7 +53,7 @@
     color: #4d4d4d;
 }
 
-.page1{
+.page1 {
     margin-top: 5rem;
     padding: 5rem 0 0 0;
     display: flex;
@@ -82,15 +83,16 @@
 .contain hr {
     margin: 0.5rem 0;
     border: 3px dotted #b85300;
-    border-style: none none dotted; 
-    color: #fff; 
+    border-style: none none dotted;
+    color: #fff;
 }
+
 .contain p {
     margin-top: 1rem;
     font-size: 16px;
 }
 
-.images{
+.images {
     display: flex;
     font-size: 18px;
     text-align: center;
@@ -119,7 +121,7 @@
     margin-left: 1rem;
 }
 
-.page2{
+.page2 {
     height: 450px;
     display: flex;
     height: 78vh;
@@ -137,7 +139,8 @@
 }
 
 .contain_page2 h1:first-child {
-    color: #d9d9d9;;
+    color: #d9d9d9;
+    ;
     font-size: 63px;
 }
 
@@ -146,7 +149,7 @@
     margin: 0 0 0 30rem;
 }
 
-.page3{
+.page3 {
     height: 450px;
     display: flex;
     height: 60vh;
@@ -155,6 +158,7 @@
     background-size: cover;
     color: #fff;
 }
+
 .contain_page3 {
     margin: 0;
     padding-left: 20rem;
@@ -164,19 +168,22 @@
     display: flex;
     margin-top: 5rem;
 }
- 
-.contain_page3 h1{
+
+.contain_page3 h1 {
     font-size: 68px;
 }
+
 .contain_page3 h1:first-child {
-    color: #d9d9d9;;
+    color: #d9d9d9;
+    ;
     font-size: 63px;
 }
 
-.services > * {
+.services>* {
     margin-right: 10rem;
     width: 300px;
 }
+
 .services hr {
     height: 2px;
     background-color: #fff;
@@ -196,10 +203,10 @@
     border-style: dashed solid;
     width: 800px;
     margin: 0;
-
+    margin-top: 2rem;
 }
 
-.page4{
+.page4 {
     padding-top: 3rem;
     height: 450px;
     display: flex;
@@ -209,8 +216,10 @@
     background-size: cover;
     color: #fff;
 }
+
 .page4 .contain_page3 h1:first-child {
-    color: #d9d9d9;;
+    color: #d9d9d9;
+    ;
     font-size: 54px;
 }
 
@@ -218,8 +227,6 @@
     font-size: 16px;
     color: #fff;
 }
-
-
 
 .form-control {
     background-color: transparent;
@@ -234,23 +241,45 @@
     background-color: #3d1a0b;
     text-align: center;
     color: #fff;
+    padding-top: 3rem;
+
 }
 
-.page5 > * {
+
+.page5>* {
     margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.line5 {
+.line5{
     margin-bottom: 0;
 }
-.line1{
-    display: flex;
-    align-items: start;
+
+.brands {
+    width: 200px;
+    margin: 0 2rem;
 }
 
+.brand {
+    width: 130px;
+}
 
+.page6 {
+    background-color: #3d1a0b;
+    display: flex;
+    color: #fff;
+    height: 460px;
+    padding-top: 8rem;
+    justify-content: center;
+    align-items: flex-start;
+}
 
-
+.page6 > * {
+    margin: 0;
+    margin-right: 3rem;
+}
 
 footer {
     background-color: #000;
