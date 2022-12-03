@@ -57,7 +57,7 @@
     height: 450px;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(35, 63, 90, 0.5), rgba(6, 6, 6, 0.1)), url("./images/coffee-machine.jpg");
+    background: linear-gradient(rgba(35, 63, 90, 0.5), rgba(6, 6, 6, 0.1)), url("../images/coffee-machine.jpg");
     background-repeat: no-repeat, repeat;
     background-size: cover;
     color: #fff;
