@@ -1,0 +1,234 @@
+* {
+    margin: 0 auto;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    height: 4rem;
+    background-color: #fff;
+}
+
+.img_logo {
+    margin: 0;
+    margin-left: 2rem;
+    width: 15rem;
+}
+
+.navbar {
+    width: 80%;
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
+}
+
+.navbar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 1rem;
+}
+
+.navbar a:active {
+    font-weight: 650;
+    color: #4d4d4d;
+}
+
+.div_title {
+    margin-top: 4rem;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/pablo.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    color: #000;
+    font-size: 30px;
+}
+
+.courses {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+}
+
+.courses>* {
+    margin-top: 2rem;
+
+}
+
+.cours_names {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.course {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.crs_img {
+    width: 60px;
+    border-radius: 50%;
+    margin: 0;
+    margin-right: 1rem;
+}
+
+.courses p {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.for_beg-profs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding-bottom: 5rem;
+}
+
+.for_beg-profs h1{
+    margin: 4rem 0;
+}
+
+.basics {
+    display: inline-flex;
+    text-align: center;
+}
+
+.basic {
+    width: 350px;
+    border-right: 2px solid #aaffa9;
+}
+
+.basic > * {
+    margin-bottom: 1rem;
+}
+
+.basic:last-child {
+    border: none;
+}
+
+.basic h3 {
+    margin-bottom: 1.5rem;
+
+}
+
+.basic p {
+    color: #6b6b6b;
+    font-size: 14px;
+}
+
+.barista_img {
+    width: 80px;
+}
+
+
+.learn_more {
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    height: 40px;
+    width: 400px;
+    padding: 0 1rem;
+    margin-top: 1rem;
+}
+
+input::placeholder {
+    font-size: 14px;
+}
+
+select {
+    height: 40px;
+    width: 435px;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #000;
+    color:#fff;
+    font-weight: 600;
+    width: 130px;
+    height: 40px;
+}
+
+form p {
+    margin: 1rem 0 .5rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_field {
+    border: 2px solid #1f5bff;
+    width: 60%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+
+}
+
+.leave_num{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.form_field p:last-child {
+    margin: 0;
+    margin: 1rem 0 0rem 0;
+}
+footer {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+footer li {
+    display: inline;
+    margin: 0;
+    margin: 0 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
