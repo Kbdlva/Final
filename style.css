@@ -10,13 +10,14 @@
     display: inline-flex;
     width: 100%;
     align-items: center;
-    height: 5.5rem;
+    height: 4rem;
     background-color: #fff;
 }
 
 .img_logo {
     margin: 0;
-    width: 20rem;
+    margin-left: 2rem;
+    width: 15rem;
 }
 
 .navbar {
@@ -52,7 +53,7 @@
 }
 
 .title_div {
-    margin-top: 5rem;
+    margin-top: 4rem;
     height: 450px;
     display: flex;
     align-items: center;
