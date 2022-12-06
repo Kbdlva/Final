@@ -60,11 +60,13 @@
     background: linear-gradient(rgba(35, 63, 90, 0.5), rgba(6, 6, 6, 0.1)), url("../images/coffee-machine.jpg");
     background-repeat: no-repeat, repeat;
     background-size: cover;
-    background-attachment: fixed ;   /* back-img fixed when scroll */
+    background-attachment: fixed;
+    /* back-img fixed when scroll */
     color: #fff;
     font-size: 36px;
     text-align: center;
 }
+
 
 .our_devices {
     background-color: #ededed;
