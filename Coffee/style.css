@@ -1,0 +1,155 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    height: 4rem;
+    background-color: #fff;
+}
+
+.img_logo {
+    margin: 0;
+    margin-left: 2rem;
+    width: 15rem;
+}
+
+.navbar {
+    width: 80%;
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
+}
+
+.navbar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 1rem;
+}
+
+.navbar a:active {
+    font-weight: 650;
+    color: #4d4d4d;
+}
+
+.preview{
+    background-size: cover;
+    background: linear-gradient(rgba(24, 27, 30, 0.5), rgba(6, 6, 6, 0.493)), url("../images/coffeePrev.jpeg");
+    height: 40rem;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prebutton{
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #ffbf0f;
+    color: #000;
+    line-height: 1.55;
+    padding: 15px 10px;
+    font-weight: 600;
+}
+
+.prewrapper{
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 0 20%;
+}
+
+.prewrapper *:not(:last-child){
+    margin-bottom: 50px;
+}
+
+.text{
+    margin-top: 4rem;
+    color: #fff;
+    font-size: 42px;
+}
+
+.text1{
+    color: #fff;
+    font-size: 22px;
+}
+
+.item{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item img{
+    width: 80%;
+}
+
+.prname{
+    color: #383838;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.prdesc{
+    color: #000;
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 300;
+}
+
+.prprice{
+    color: #000000;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.item *:not(:last-child){
+    margin-bottom: 10px;
+}
+
+#weight{
+    width: 100%;
+}
+
+.prsub{
+    color: #000000;
+    background-color: #ff9e1f;
+    height: 45px;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+}
+
+.prform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
