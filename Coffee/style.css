@@ -99,6 +99,9 @@
 }
 
 .item{
+    position: relative;
+    height: 650px;
+    margin: 0;
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -110,6 +113,7 @@
 
 .prname{
     color: #383838;
+    text-align: center;
     font-size: 25px;
     font-weight: 700;
 }
@@ -149,7 +153,28 @@
 }
 
 .prform{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    margin-left: auto; 
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.magazine{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mlabel{
+    color: #383838;
+    font-weight: 600;
+    text-align: center;
+    margin: 40px auto;
+    font-size: 32px;
 }

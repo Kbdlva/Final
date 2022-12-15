@@ -1,3 +1,13 @@
+<?php
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'coffeelogia');
+
+$link = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_NAME);
+
+if($link-> connect_errno) echo $link->connect_error();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,12 +54,23 @@
 
     </div>
 
+    <div class="mlabel">Моносорта</div>
+
     <div class="magazine">
+
+        <?php
+            $sql = "select * from coffee order by c_id";
+            $result = $link->query($sql);
+            if($result-> num_rows>0){
+                while($row=$result->fetch_array()){
+
+        ?>
+
         <div class="item">
             <img src="https://thumb.tildacdn.com/tild3762-3632-4833-a664-666638626463/-/format/webp/photo.jpg" alt="">
-            <div class="prname">Бразилия Сантос</div>
-            <div class="prdesc">Какао, карамель, молочный шоколад</div>
-            <div class="prprice">3000 тг</div>
+            <div class="prname"><?= $row['c_name']?></div>
+            <div class="prdesc" style="text-align: center;"><?=$row['description']?></div>
+            <div class="prprice"><?=$row['price']?> тг</div>
             <form action="" class="prform">
                 <div class="" style="width: 70%;">
                     <label for="weight" class="prdesc" style="display: block; margin-bottom: 0;">вес</label>
@@ -72,6 +93,12 @@
                 <button type="submit" class="prsub">Купить</button>
             </form>
         </div>
+
+        <?php
+        }
+        }
+        ?>
+
     </div>
 
 </body>
