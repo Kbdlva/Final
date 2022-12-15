@@ -2,22 +2,41 @@
     margin: 0 auto;
     font-family: 'Exo 2', sans-serif;
 }
-
-.header {
+.head {
     position: fixed;
     top: 0;
     z-index: 50;
-    display: inline-flex;
+}
+
+.head::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: #4d4d4d;
+}
+
+.header {
+    position: relative;
+    display: inline-flex;
     align-items: center;
     height: 4rem;
-    background-color: #fff;
+    z-index: 2;
+}
+
+/* media 980 header-burger */
+
+.logo {
+    width: 30%;
 }
 
 .img_logo {
     margin: 0;
     margin-left: 2rem;
-    width: 15rem;
+    width: 60%;
+    min-width: 200px;
 }
 
 .navbar {
@@ -29,12 +48,12 @@
     display: flex;
     justify-content: right;
     margin-right: 2rem;
-}
-
-.navbar ul {
     padding: 0;
     list-style: none;
+    flex-wrap: wrap;
 }
+
+
 
 .navbar li {
     display: inline;
@@ -47,6 +66,12 @@
     margin: 0 1rem;
 }
 
+.navbar a:hover {
+    text-decoration: underline;
+
+}
+
+
 .navbar a:active {
     font-weight: 650;
     color: #4d4d4d;
@@ -54,14 +79,14 @@
 
 .title_div {
     margin-top: 4rem;
-    height: 450px;
+    height: 91vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(35, 63, 90, 0.5), rgba(6, 6, 6, 0.1)), url("../images/coffee-machine.jpg");
+    background: linear-gradient(rgba(33, 99, 111, 0.5), rgba(6, 6, 6, 0.1)), url("../images/coffee-machine.jpg");
     background-repeat: no-repeat, repeat;
-    background-size: cover;
     background-attachment: fixed;
-    /* back-img fixed when scroll */
+    background-position: center;
+    background-size: cover;
     color: #fff;
     font-size: 36px;
     text-align: center;
@@ -73,9 +98,11 @@
 }
 
 .wrapper {
-    width: 80%;
+    width: 1100px;
     background-color: #fff;
 }
+
+/* add query to wrapper width */
 
 .wrapper:first-child {
     padding-top: 3rem;
@@ -89,22 +116,43 @@
     text-align: center;
     color: #4d4d4d;
     font-weight: 200;
+    width: 60%;
 }
 
-.description>* {
+.desc_wrap {
+    width: 60%;
+}
+
+.dev {
+    width: 40%;
+}
+
+.desc_wrap>* {
     margin-bottom: 2rem;
+
+}
+
+.description h1 {
+    word-wrap: break-word;
+    /* width: 60%; */
+
 }
 
 .img_dev {
-    width: 600px;
+    width: 100%;
 }
 
 .more_info {
-    background-color: #fff;
+    background-color: #4d4d4d;
     display: flex;
     align-items: center;
     height: 400px;
     margin-top: 6rem;
+    flex-wrap: wrap;
+}
+
+.more_info_desc {
+    width: 60%;
 }
 
 .more_info h3 {
@@ -113,6 +161,15 @@
 
 .more_info p {
     font-weight: 200;
+}
+
+.more_info_img {
+    width: 80%;
+    min-width: 150px;
+}
+
+.more_img {
+    margin: 0;
 }
 
 .price {
@@ -124,12 +181,13 @@
     height: 300px;
 }
 
-.price form {
+.price_form {
     display: flex;
-    margin-top: 4rem
+    margin-top: 4rem;
+
 }
 
-.price input {
+.price_form input {
     height: 50px;
     width: 300px;
     margin-right: 1rem;
@@ -141,6 +199,7 @@
 }
 
 .price_btn {
+    height: 50px;
     background-color: #000;
     color: #fff;
     width: 150px;
@@ -152,7 +211,6 @@ footer {
     background-color: #000;
     display: flex;
     align-items: center;
-
     height: 50px;
 }
 
@@ -165,4 +223,48 @@ footer li {
 footer a {
     text-decoration: none;
     color: #fff;
+}
+
+
+@media (max-width: 800px) {
+    .devs {
+        flex-direction: column;
+        background-color: aqua;
+    }
+
+    .desc_wrap {
+        width: 100%;
+    }
+
+    .dev {
+        width: 70%;
+    }
+}
+
+
+@media (max-width:960px) {
+    .price_form {
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .price input {
+        width: 60%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        padding-left: 2rem;
+        margin-left: 0;
+    }
+
+    .price_btn {
+        width: 65%;
+        margin-bottom: 6rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .wrapper {
+        width: 800px;
+    }
 }
