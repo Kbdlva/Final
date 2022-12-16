@@ -25,7 +25,6 @@ html, body {
     left: 0;
     width: 100vw;
     height: 100%;
-    background-color: aqua;
     z-index: 2;
 }
 
@@ -34,6 +33,8 @@ html, body {
     display: inline-flex;
     align-items: center;
     height: 4rem;
+    
+    width: 100vw;
 }
 
 /* media 980 header-burger */
@@ -42,7 +43,6 @@ html, body {
     width: 30%;
     z-index: 3;
     margin: 0;
-
 }
 
 .img_logo {
@@ -66,6 +66,7 @@ html, body {
     flex-wrap: wrap;
     position: relative;
     z-index: 2;
+    padding-right: 2rem;
 }
 
 
@@ -83,9 +84,7 @@ html, body {
 
 .navbar a:hover {
     text-decoration: underline;
-
 }
-
 
 .navbar a:active {
     font-weight: 650;

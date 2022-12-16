@@ -3,15 +3,35 @@
     font-family: 'Exo 2', sans-serif;
 }
 
-.header {
+.head {
     position: fixed;
     top: 0;
     z-index: 50;
+}
+
+.head::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.header {
+    position: relative;
     display: inline-flex;
-    width: 100%;
     align-items: center;
     height: 4rem;
-    background-color: #fff;
+    width: 100vw;
+}
+
+.logo {
+    width: 30%;
+    z-index: 3;
+    margin: 0;
 }
 
 .img_logo {
@@ -32,8 +52,15 @@
 }
 
 .navbar ul {
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
     padding: 0;
     list-style: none;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    padding-right: 2rem;
 }
 
 .navbar li {
@@ -52,19 +79,49 @@
     color: #4d4d4d;
 }
 
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.header_burger {
+    display: none;
+}
+
+
+.header_burger.active::before {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.header_burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 8px;
+}
+
+.header_burger.active span {
+    transform: scale(0);
+
+}
+
 .div_title {
     margin-top: 4rem;
-    height: 300px;
+    min-height: 300px;
+    display: flex;
+    background-image: url("../images/pablo.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* back-img fixed when scroll */
+    color: #000;
+    font-size: 30px;
+}
+
+.contain {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../images/pablo.png");
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
-    background-attachment: fixed ;   /* back-img fixed when scroll */
-    color: #000;
-    font-size: 30px;
+    width: 90%;
 }
 
 .courses {
@@ -112,25 +169,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
     padding-bottom: 5rem;
 }
 
-.for_beg-profs h1{
+.for_beg-profs h1 {
     margin: 4rem 0;
+    width: 85%;
 }
 
 .basics {
     display: inline-flex;
     text-align: center;
+    flex-wrap: wrap;
+    justify-content: left;
 }
 
 .basic {
-    width: 350px;
+    width: 353px;
     border-right: 2px solid #aaffa9;
 }
 
-.basic > * {
+.basic>* {
     margin-bottom: 1rem;
 }
 
@@ -180,7 +240,7 @@ select {
 
 .btn {
     background-color: #000;
-    color:#fff;
+    color: #fff;
     font-weight: 600;
     width: 130px;
     height: 40px;
@@ -207,15 +267,17 @@ form {
 
 }
 
-.leave_num{
+.leave_num {
     text-align: center;
     margin: 2rem 0;
+    width: 90%;
 }
 
 .form_field p:last-child {
     margin: 0;
     margin: 1rem 0 0rem 0;
 }
+
 footer {
     background-color: #000;
     display: flex;
@@ -232,4 +294,142 @@ footer li {
 footer a {
     text-decoration: none;
     color: #fff;
+}
+
+
+
+@media (max-width: 960px) {
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    .head::before {
+        background-color: #000;
+    }
+
+    .img_logo {
+        border: 2px solid #fff;
+    }
+
+    .header_burger {
+        display: block;
+        position: absolute;
+        right: 4rem;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+
+    .header_burger::before,
+    .header_burger::after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2.5px;
+        left: 0;
+        transition: all 0.3s ease-out;
+
+    }
+
+    .header_burger span {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        width: 100%;
+        height: 2.5px;
+        top: 8px;
+        transition: all 0.2s ease-out;
+
+    }
+
+    .header_burger::before {
+        top: 0
+    }
+
+    .header_burger::after {
+        bottom: 0;
+    }
+
+    .navbar {
+        position: fixed;
+        top: -120%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        padding: 9rem 0 0 0;
+        text-align: center;
+        transition: all 0.2s ease-out;
+
+    }
+
+    .navbar.active {
+        top: 0;
+        overflow: auto;
+
+    }
+
+    .navbar ul {
+        margin: 0;
+        padding:0;
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin-bottom: 1rem;
+    }
+
+    .navbar a {
+        font-size: 20px;
+    }
+
+    .for_beg-profs h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1060px) {
+    .contain {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .basic {
+        border-right: none;
+        margin-bottom: 2rem;
+        ;
+    }
+}
+
+@media (max-width: 768px) {
+
+    input {
+        width: 300px;
+    }
+
+    select {
+        width: 335px;
+    }
+
+    .form_field {
+        text-align: center;
+    }
+
+    .contain {
+        font-size: 18px;
+    }
+
+
+}
+
+@media (max-width: 630px) {
+    input {
+        width: 200px;
+    }
+
+    select {
+        width: 235px;
+    }
 }

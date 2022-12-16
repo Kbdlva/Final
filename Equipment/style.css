@@ -38,9 +38,6 @@ body {
     height: 4rem;
 }
 
-
-/* media 980 header-burger */
-
 .logo {
     width: 30%;
     z-index: 3;
@@ -57,7 +54,6 @@ body {
 .navbar {
     margin: 0;
     width: 65%;
-
 }
 
 .navbar ul {
@@ -68,7 +64,6 @@ body {
     list-style: none;
     flex-wrap: wrap;
     position: relative;
-
     z-index: 2;
 }
 
@@ -227,6 +222,11 @@ body {
     flex-direction: column;
     padding-top: 3rem;
     min-height: 50vh;
+}
+
+.price h1 {
+    width: 85%;
+    text-align: center;
 }
 
 .price_form {
