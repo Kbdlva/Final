@@ -6,6 +6,13 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function() {
+    console.log("readuy");
+    $("#txt1").animate({"opacity": "1", "top":"0" },1000);
+    $("#txt2").animate({"opacity": "1", "top":"0" },2000);
+
+});
+
 $(document).ready(function () {
     $('.btn').click(function (event) {
 

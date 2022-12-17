@@ -27,6 +27,9 @@ $(document).ready(function () {
         else{
             $('.sentMSG').fadeIn();
             // $('body').css('overflow','hidden')
+            jQuery(document).ready(function() {
+                $('input').val('');
+              });
         }
     });
 });
@@ -37,5 +40,8 @@ $(document).ready(function () {
         // $('body').css('overflow','auto')
     });
 });
+
+
+
 
 

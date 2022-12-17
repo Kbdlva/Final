@@ -106,7 +106,7 @@
 
 .div_title {
     margin-top: 4rem;
-    min-height: 300px;
+    min-height: 400px;
     display: flex;
     background-image: url("../images/pablo.png");
     background-repeat: no-repeat, repeat;
@@ -115,6 +115,18 @@
     /* back-img fixed when scroll */
     color: #000;
     font-size: 30px;
+}
+
+#txt1 {
+    position: relative;
+    top:100px;
+    opacity: 0;
+}
+
+#txt2 {
+    position: relative;
+    top:100px;
+    opacity: 0;
 }
 
 .contain {

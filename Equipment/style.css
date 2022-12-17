@@ -120,6 +120,18 @@ body {
     text-align: center;
 }
 
+#txt1 {
+    position: relative;
+    top:150px;
+    opacity: 0;
+}
+
+#txt2 {
+    position: relative;
+    top:150px;
+    opacity: 0;
+}
+
 .our_devices {
     background-color: #ededed;
 }
