@@ -63,13 +63,29 @@
                 </div>
             </div>
             <form>
-                <input type="text" id="mobile_code" placeholder="9-999-9999" class="form-control">
-                <button class="master_call_btn">ВЫЗВАТЬ МАСТЕРА</button>
+                <input type="text" id="mobile_code" class="form-control" placeholder="8(999)999-99-99" maxlength="11">
+                <button type="button" class="master_call_btn" id="call_btn">ВЫЗВАТЬ МАСТЕРА</button>
             </form>
             <p>Мы не отправляем спам нашим клиентам, партнёрам и посетителям сайта</p>
 
         </div>
     </div>
+
+    <div class="popup" id="pop">
+        <div class="pop_content">
+            <p class="msg" id="msg">Пожулайста, заполните поле</p>
+        </div>
+    </div>
+
+    <div class="sentMSG" id="sent">
+        <div class="sent_content">
+            <i class="fa-solid fa-xmark" id="cross"></i>
+            <i class="fa-solid fa-check" id="check"></i>
+            <p></p>
+            <p class="thanks" id="thanks">Пожалуйста, дождитесь ответа. <br> Мы вам позвоним.</p>
+        </div>
+    </div>
+
     <div class="page2">
         <div class="contain_page2">
             <h1>СЛОМАЛАСЬ <br></h1>
@@ -90,7 +106,7 @@
             <div class="services">
                 <div class="serv serv1">
                     <h2>СОБСТВЕННЫЙ <br>СКЛАД <br>ЗАПЧАСТЕЙ</h2>
-                    <div class = "vertical"></div>
+                    <div class="vertical"></div>
                     <hr>
                     <p>Это позволяет нам сильно<br>
                         экономить ваше время на<br>
@@ -99,14 +115,14 @@
                 </div>
                 <div class="serv serv2">
                     <h2>ДОСТАВКА НА<br> СЕРВИС И <br>ОБРАТНО</h2>
-                    <div class = "vertical"></div>
+                    <div class="vertical"></div>
                     <hr>
                     <p>Если поломку нельзя устранить<br> месте, наш мастер<br>
                         заберет машину на сервис и<br> привезет ее обратно после<br> ремонта</p>
                 </div>
                 <div class="serv serv3">
                     <h2>ПОЛНЫЙ ПАКЕТ <br> ЗАКРЫВАЮЩИХ <br>ДОКУМЕНТОВ</h2>
-                    <div class = "vertical"></div>
+                    <div class="vertical"></div>
                     <hr>
                     <p>Работаем с юр. лицами. <br>Предоставляем все <br>необходимые для бухгалтерии <br>закрывающие
                         документы.</p>
@@ -121,20 +137,20 @@
             <div class="services">
                 <div class="serv serv1">
                     <h2>ШИРОКИЙ ВЫБОРБ<br> КОФЕ ПО <br>"ПРИЯТНЫМ"<br> ЦЕНАМ</h2>
-                    <div class = "vertical"></div>
+                    <div class="vertical"></div>
                     <hr>
                     <p>Для наших партнеров<br> мы предоставляем <br>постоянные скидки от<br> 10% на поставку кофе</p>
                 </div>
                 <div class="serv serv2">
                     <h2>БЕСПЛАТНОЕ<br> ТЕХОБСЛУЖИВАНИЕ<br> ВАШЕЙ ТЕХНИКИ</h2>
-                    <div class = "vertical"></div>
+                    <div class="vertical"></div>
                     <hr>
                     <p>Наши мастера бесплатно <br>предоставят сервисное <br>обслуживание и осмотр. <br>Запчасти
                         оплачиваются по<br> отдельной стоимости.</p>
                 </div>
                 <div class="serv serv3">
                     <h2>БЕСПЛАТНЫЕ<br> ОБУЧАЮЩИЕ <br>МАСТЕР-КЛАССЫ<br> ДЛЯ БАРИСТА</h2>
-                    <div class = "vertical"></div>
+                    <div class="vertical"></div>
                     <hr>
                     <p>Мы с удовольствием обучим<br> ваших бариста тонкостям<br> приготовления, видам кофе и
                         <br>специфике работы на<br> оборудовании.

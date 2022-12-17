@@ -46,7 +46,7 @@
         <div class="div_title">
             <div class="contain">
                 <h1>ШКОЛА БАРИСТА</h1>
-                <h3>СЕКРЕТЫ ПРИГОТОВЛЕНИЯ КОФЕ ВЫСОКОГО КАЧЕСТВА</h3>  
+                <h3>СЕКРЕТЫ ПРИГОТОВЛЕНИЯ КОФЕ ВЫСОКОГО КАЧЕСТВА</h3>
             </div>
         </div>
         <div class="courses">
@@ -102,20 +102,32 @@
         </div>
         <div class="learn_more">
             <div class="form_field">
-                <h2>Узнать подробнее о курсах</h2>
-                <p class="leave_num">Оставьте свой номер телефона и имя и мы Вам  перезвоним в ближайшее время</p>
-                <form>
-                    <input type="text" placeholder="Ваш номер телефона">
-                    <input type="text" placeholder="Ваше имя">
-                    <p>О каком курсе Вы хотите узнать?</p>
-                    <select id="course" name="level">
-                        <option value="Базовый">Базовый</option>
-                        <option value="Шеф">Шеф-бариста</option>
-                        <option value="открыть">Как открыть кофейню</option>
-                    </select>
-                    <button class="btn">Записаться</button>
-                </form>
+                <div class="div1">
+                    <h2>Узнать подробнее о курсах</h2>
+                    <p class="leave_num">Оставьте свой номер телефона и имя и мы Вам перезвоним в ближайшее время</p>
+                    <form>
+                        <input type="text" placeholder="Ваш номер телефона" id="phone">
+                        <input type="text" placeholder="Ваше имя" id="name">
+                        <p class="what_course">О каком курсе Вы хотите узнать?</p>
+                        <select id="course" name="level">
+                            <option value="Базовый">Базовый</option>
+                            <option value="Шеф">Шеф-бариста</option>
+                            <option value="открыть">Как открыть кофейню</option>
+                        </select>
+                        <div class="message">
+                            <p>Вы заполнили не все поля</p>
+                        </div>
+                        <button type="button" class="btn">Записаться</button>
+                    </form>
+                </div>
+                <div class="div2">
+                    <div class="mesCard">
+                        <p>Пожалуйста, дождитесь ответа. <br> Мы вам позвоним.</p>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </div>
     <script src="script.js"></script>

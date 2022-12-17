@@ -6,3 +6,16 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function () {
+    $('.btn').click(function (event) {
+
+        if ($("#name").val() != '' && $("#phone").val() != '') {
+            $('.form_field').toggleClass('active');
+        }
+        else {
+            if ($("#name").val() == '' || $("#phone").val() == '') {
+                $(".message").show()
+            }
+        }
+    });
+});
