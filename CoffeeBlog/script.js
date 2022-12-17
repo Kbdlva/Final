@@ -1,3 +1,12 @@
+$(document).ready(function(){
+    $('.header_burger').click(function(event){
+        $('.header_burger').toggleClass('active');
+        $('.navbar').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+});
+
+
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
 const contents = document.querySelectorAll(".content");
@@ -28,3 +37,6 @@ btns.forEach((btn, i) => {
         sliderNav(i);
     })
 })
+
+
+

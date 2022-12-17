@@ -37,7 +37,8 @@
 .img_logo {
     margin: 0;
     margin-left: 2rem;
-    width: 15rem;
+    width: 60%;
+    min-width: 200px;
 }
 
 .navbar {
@@ -258,6 +259,7 @@ form {
 .form_field {
     border: 2px solid #1f5bff;
     width: 60%;
+    min-width: 350px;
     height: 550px;
     display: flex;
     flex-direction: column;
@@ -426,10 +428,10 @@ footer a {
 
 @media (max-width: 630px) {
     input {
-        width: 200px;
+        width: 250px;
     }
 
     select {
-        width: 235px;
+        width: 285px;
     }
 }

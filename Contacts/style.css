@@ -45,7 +45,8 @@ body {
 .img_logo {
     margin: 0;
     margin-left: 2rem;
-    width: 15rem;
+    width: 60%;
+    min-width: 200px;
 }
 
 .navbar {

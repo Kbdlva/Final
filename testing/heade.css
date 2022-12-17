@@ -21,6 +21,7 @@ html, body {
 .head::before {
     content: '';
     position: absolute;
+    background-color: #fff;
     top: 0;
     left: 0;
     width: 100vw;
@@ -33,11 +34,8 @@ html, body {
     display: inline-flex;
     align-items: center;
     height: 4rem;
-    
     width: 100vw;
 }
-
-/* media 980 header-burger */
 
 .logo {
     width: 30%;
@@ -69,8 +67,6 @@ html, body {
     padding-right: 2rem;
 }
 
-
-
 .navbar li {
     display: inline;
     margin: 0;
@@ -95,7 +91,6 @@ html, body {
     display: none;
 }
 
-
 .header_burger.active::before {
     transform: rotate(45deg);
     top: 8px;
@@ -104,13 +99,10 @@ html, body {
 .header_burger.active::after {
     transform: rotate(-45deg);
     bottom: 8px;
-
-
 }
 
 .header_burger.active span {
     transform: scale(0);
-
 }
 
 
@@ -189,6 +181,8 @@ html, body {
 
     .navbar ul {
         flex-direction: column;
+        margin: 0;
+        padding: 0;
     }
 
     .navbar li {

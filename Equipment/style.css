@@ -15,8 +15,6 @@ body {
     position: fixed;
     top: 0;
     z-index: 50;
-    width: 100vw;
-
 }
 
 .head::before {
@@ -36,6 +34,7 @@ body {
     display: inline-flex;
     align-items: center;
     height: 4rem;
+    width: 100vw;
 }
 
 .logo {
@@ -53,21 +52,20 @@ body {
 
 .navbar {
     margin: 0;
-    width: 65%;
+    width: 80%;
 }
 
 .navbar ul {
     display: flex;
-    left: 0;
     justify-content: right;
+    margin-right: 2rem;
     padding: 0;
     list-style: none;
     flex-wrap: wrap;
     position: relative;
     z-index: 2;
+    padding-right: 2rem;
 }
-
-
 
 .navbar li {
     display: inline;
@@ -80,22 +78,18 @@ body {
     margin: 0 1rem;
 }
 
-
 .navbar a:hover {
     text-decoration: underline;
 }
-
 
 .navbar a:active {
     font-weight: 650;
     color: #4d4d4d;
 }
 
-
 .header_burger {
     display: none;
 }
-
 
 .header_burger.active::before {
     transform: rotate(45deg);
@@ -105,13 +99,10 @@ body {
 .header_burger.active::after {
     transform: rotate(-45deg);
     bottom: 8px;
-
-
 }
 
 .header_burger.active span {
     transform: scale(0);
-
 }
 
 .title_div {
@@ -128,7 +119,6 @@ body {
     font-size: 36px;
     text-align: center;
 }
-
 
 .our_devices {
     background-color: #ededed;
@@ -308,8 +298,6 @@ footer a {
         left: 0;
         transition: all 0.3s ease-out;
         background-color: #fff;
-
-
     }
 
     .header_burger span {
@@ -320,8 +308,6 @@ footer a {
         top: 8px;
         transition: all 0.2s ease-out;
         background-color: #fff;
-
-
     }
 
     .header_burger::before {
@@ -354,6 +340,8 @@ footer a {
 
     .navbar ul {
         flex-direction: column;
+        margin: 0;
+        padding: 0
     }
 
     .navbar li {
@@ -364,8 +352,6 @@ footer a {
     .navbar a {
         font-size: 20px;
     }
-
-
 
     .title_div {
         font-size: 24px;
@@ -418,11 +404,14 @@ footer a {
     .img_dev {
         width: 80%;
     }
-
-
 }
 
 @media (max-width: 615px) {
+
+    .title_div {
+        font-size: 18px;
+    }
+
     .more_info {
         flex-direction: column;
     }
@@ -443,8 +432,6 @@ footer a {
         width: 90%;
         display: flex;
     }
-
-
 
     .wrapper {
         width: 100vw;
