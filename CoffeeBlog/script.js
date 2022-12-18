@@ -10,7 +10,8 @@ $(document).ready(function(){
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
 const contents = document.querySelectorAll(".content");
-
+const popups = document.querySelectorAll(".popup-screen");
+const opens = document.querySelectorAll(".open");
 
 
 var sliderNav = function(manual){
@@ -29,7 +30,10 @@ var sliderNav = function(manual){
     btns[manual].classList.add("active");
     slides[manual].classList.add("active");
     contents[manual].classList.add("active");
+
 }
+
+
 
 
 btns.forEach((btn, i) => {
@@ -37,6 +41,9 @@ btns.forEach((btn, i) => {
         sliderNav(i);
     })
 })
+
+
+
 
 
 
