@@ -9,7 +9,9 @@ html{
 
 body{
     display: block;
-    background-color: rgba(228, 139, 38, 0.784);
+    /* background-color: rgba(224, 152, 68, 0.838); */
+    background-color: rgba(225, 147, 57, 0.784);
+    /* background-color: #fff; */
 }
 
 .head {
