@@ -3,15 +3,19 @@ var sum;
 getProducts();
 var products;
 function toBasket(form) {
+    if (getCookie('number') == '') {
+        window.alert("You did not log in!");
+        return;
+    }
     let pr_id = form['pr_id'].value;
     let weight = form['weight'].value;
     let grind = form['grind'].value;
     let pr_type = form['type'].value;
     let query = "addToCart";
-    let number = '87777777777';
+    let number = getCookie('number');
     console.log(pr_id + " " + weight + " " + grind);
     $.ajax({
-        url: 'executer.php',
+        url: '../php/executer.php',
         type: 'POST',
         data: { pr_id, weight, grind, pr_type, number, query },
         success: (result) => {
@@ -27,7 +31,7 @@ function toBasket(form) {
 }
 function getProducts() {
     $.ajax({
-        url: 'getProducts.php',
+        url: '../php/getProducts.php',
         type: 'POST',
         data: {},
         success: (result) => {
@@ -53,14 +57,15 @@ function decrease(
     let grind = form['grind'].value;
     let pr_type = form['type'].value; */
     let query = "decrease";
-    let number = '87777777777';
+    let number = getCookie('number');
     console.log(pr_id + " " + weight + " " + grind);
     $.ajax({
-        url: 'executer.php',
+        url: '../php/executer.php',
         type: 'POST',
         data: { pr_id, weight, grind, pr_type, number, query },
         success: (result) => {
             console.log('decrease is reached');
+            console.log(result);
             basket = JSON.parse(result);
             console.log(basket[0]['grind']);
             updateBasket();
@@ -82,10 +87,10 @@ function deleteFromCart(
     let grind = form['grind'].value;
     let pr_type = form['type'].value; */
     let query = "deleteFromCart";
-    let number = '87777777777';
+    let number = getCookie('number');
     console.log(pr_id + " " + weight + " " + grind);
     $.ajax({
-        url: 'executer.php',
+        url: '../php/executer.php',
         type: 'POST',
         data: { pr_id, weight, grind, pr_type, number, query },
         success: (result) => {
@@ -101,9 +106,9 @@ function deleteFromCart(
 }
 function getBasket() {
     let query = 'get';
-    let number = '87777777777';
+    let number = getCookie('number');
     $.ajax({
-        url: 'executer.php',
+        url: '../php/executer.php',
         type: 'POST',
         data: { query, number },
         success: (result) => {
@@ -128,10 +133,10 @@ function increase(
     let grind = form['grind'].value;
     let pr_type = form['type'].value; */
     let query = "increase";
-    let number = '87777777777';
+    let number = getCookie('number');
     console.log(pr_id + " " + weight + " " + grind);
     $.ajax({
-        url: 'executer.php',
+        url: '../php/executer.php',
         type: 'POST',
         data: { pr_id, weight, grind, pr_type, number, query },
         success: (result) => {
@@ -147,12 +152,18 @@ function increase(
 }
 
 function updateBasket() {
+    let bask = document.querySelector('.basket');
     console.log(basket[0]);
     if (basket[0] == 0) {
+        console.log(basket[0]);
         document.querySelector('.main').style.display = 'none';
+        document.querySelector(".cart").style.display = 'none';
         document.body.style.overflow = 'auto';
+        document.querySelector(".cart-num").innerHTML = 0;
+        bask.innerHTML = "";
         return;
     }
+    document.querySelector(".cart").style.display = 'flex';
 
     let x = 0;
     sum = 0;
@@ -162,7 +173,6 @@ function updateBasket() {
         console.log(x);
     }
     document.querySelector(".cart-num").innerHTML = x;
-    let bask = document.querySelector('.basket');
     bask.innerHTML = "";
 
     for (let index = 0; index < basket.length; index++) {
@@ -240,6 +250,46 @@ function itemPrice(prid, type, weight) {
         }
     }
 }
+
+function order(form) {
+    let city = form['city'].value;
+    let address = form['address'].value;
+    let delivery = form['delivery'].value;
+    let payment = form['payment'].value;
+    let number = getCookie('number');
+    let total = sum;
+    $.ajax({
+        url: '../php/submit.php',
+        type: 'POST',
+        data: { city, address, delivery, payment, number, total },
+        success: (result) => {
+            console.log('submit is reached');
+            console.log(result);
+            getBasket();
+        },
+        error: () => {
+            console.log('error');
+        }
+    });
+}
+
+document.querySelector("#a2").addEventListener('click', () => {
+    document.querySelector('.total').innerHTML = 'Total:' + sum + '+1000 tg';
+    sum += 1000;
+    document.querySelector("#a2").disabled = true;
+    document.querySelector("#a1").disabled = false;
+
+
+});
+document.querySelector("#a1").addEventListener('click', () => {
+    sum -= 1000;
+    document.querySelector('.total').innerHTML = 'Total:' + sum + ' tg';
+    document.querySelector("#a1").disabled = true;
+    document.querySelector("#a2").disabled = false;
+});
+
+
+
 document.querySelector(".cart").addEventListener("click", () => {
     document.querySelector('.main').style.display = 'flex';
     document.body.style.overflow = 'hidden';
@@ -249,12 +299,68 @@ document.querySelector(".mainb").addEventListener("click", () => {
     document.body.style.overflow = 'auto';
 });
 $(document).ready(function () {
-    getBasket();
     $('.header_burger').click(function (event) {
         $('.header_burger').toggleClass('active');
         $('.navbar').toggleClass('active');
         $('body').toggleClass('lock');
-
-
     });
 });
+
+
+checkLogin();
+function checkLogin() {
+    let log = document.querySelector('#log');
+    if (getCookie('number') == '') {
+        log.innerHTML = 'Log In';
+        log.addEventListener('click', () => {
+            window.location.href = "../login/index.html";
+        });
+    }
+    else {
+        getBasket();
+        log.innerHTML = 'Log Out';
+        log.addEventListener('click', () => {
+            deleteCookie('number');
+            location.reload();
+        });
+    }
+}
+
+
+//Cookie handler
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function deleteCookie(cname) {
+    let expires = "expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.cookie = cname + "=" + ";" + expires + ";path=/";
+}
+function checkCookie(cname) {
+    let username = getCookie(cname);
+    if (username != "") {
+        alert("Welcome again " + username);
+    } else {
+        username = prompt("Please enter your name:", "");
+        if (username != "" && username != null) {
+            setCookie("username", username, 365);
+        }
+    }
+}

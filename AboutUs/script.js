@@ -107,8 +107,27 @@ $(document).ready(function () {
     backgroundColor: 'crimson',
     buttonImage: '<img src="burger.svg" />'
 }); */
-deleteCookie('number');
-checkCookie('number');
+
+
+checkLogin();
+function checkLogin() {
+    let log = document.querySelector('#log');
+    if (getCookie('number') == '') {
+        log.innerHTML = 'Log In';
+        log.addEventListener('click', () => {
+            window.location.href = "../login/index.html";
+        });
+    }
+    else {
+        log.innerHTML = 'Log Out';
+        log.addEventListener('click', () => {
+            deleteCookie('number');
+            location.reload();
+        });
+    }
+}
+
+
 //Login cookie handler
 function getCookie(cname) {
   let name = cname + "=";

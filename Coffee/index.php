@@ -52,111 +52,87 @@ if (isset($_POST['add_to_cart'])) {
                     <ul>
                         <li><a href="../AboutUs/aboutUs.html">О нас</a></li>
                         <li><a href="../Coffee/index.php">Кофе</a></li>
-                        <li><a href="../Tea/index.html">Чай</a></li>
                         <li><a href="../Equipment/equipment.html">Оборудование</a></li>
                         <li><a href="../Service/service.html">Сервис</a></li>
                         <li><a href="../School/school.html">Школа Бариста</a></li>
                         <li><a href="../Contacts/contacts.html">Контакты</a></li>
                         <li><a href="../CoffeeBlog/blog.html">CoffeBLOG</a></li>
-                        <li><a href="../login/index.html"><i class="fa fa-right-to-bracket"></i></a></li>
+                        <li><a id="log" href="#$">Log In</a></li>
                     </ul>
 
                 </div>
             </div>
             <div class="cart">
-                <img class="cart-img" src="shopping-cart.png" alt="">
+                <img class="cart-img" src="../images/shopping-cart.png" alt="">
                 <div class="cart-num">
-                    <?= $count ?>
                 </div>
             </div>
         </div>
 
     </header>
-    <?php 
-    ?>
     <div class="main">
         <div class="mainb"></div>
         <div class="cartm">
             <h2>Orders</h2>
-            <div class="basket">
-                <?php
-                if (isset($_POST['basket']))
-                    echo $_POST['basket'];
-                ?>
-                    <div class="product">
-                        <div>
-                            <img src="../images/1.png" style="width: 100px;" alt="">
-                            <div class="product-name">
-                                <h4>Something</h3>
-                                    <p>Weight:</p>
-                                    <p>Grind:</p>
-                            </div>
-                        </div>
+            <div class="basket"></div>
+            <form onsubmit="order(this);return false">
+
+                <div class="total">Total:</div>
 
 
-                        <div class="count">
-                            <button class="decrease" onclick="decrease()">-</button>
-                            <h5>2</h5>
-                            <button class="increase">+</button>
-                        </div>
+                <div class="data">
+                    <h3>City:</h3>
+                    <select name="city" id="">
+                        <option value="Алматы">Алматы</option>
+                        <option value="Атырау">Атырау</option>
+                        <option value="Астана">Астана</option>
+                        <option value="Шымкент">Шымкент</option>
+                        <option value="Актау">Актау</option>
+                        <option value="Павлодар">Павлодар</option>
+                        <option value="Талдыкорган">Талдыкорган</option>
+                        <option value="Карагынды">Карагaнды</option>
+                    </select>
 
-                        <div class="sum">6000tg
-                            <button class="delete"> X </button>
-                        </div>
+
+                    <div class="address">
+                        <h3>Address:</h3>
+                        <textarea name="address" id="" cols="30" rows="5" required></textarea>
+                        <input type="radio" name="delivery" id="a1" value="Самывывоз" required checked disabled><label
+                            for="a1">Самывывоз</label>
+                        <br>
+                        <input type="radio" name="delivery" id="a2" value="Доставка" required><label
+                            for="a2">Доставка(1000тг)</label>
                     </div>
-            </div>
 
-            <div class="total">Total:</div>
-
-
-            <div class="data">
-                <h3>City:</h3>
-                <select name="city" id="">
-                    <option value="Алматы">Алматы</option>
-                    <option value="Атырау">Атырау</option>
-                    <option value="Астана">Астана</option>
-                    <option value="Шымкент">Шымкент</option>
-                    <option value="Актау">Актау</option>
-                    <option value="Павлодар">Павлодар</option>
-                    <option value="Талдыкорган">Талдыкорган</option>
-                    <option value="Карагынды">Карагaнды</option>
-                </select>
-
-
-                <div class="address">
-                    <h3>Address:</h3>
-                    <textarea name="address" id="" cols="30" rows="5"></textarea>
-                    <input type="radio" name="delivery" id="1" value="Самывывоз"><label for="1">Самывывоз</label> <br>
-                    <input type="radio" name="delivery" id="2" value="Доставка"><label for="2">Доставка(1000тг)</label>
+                    <div class="method">
+                        <h3>Payment method:</h3>
+                        <input type="radio" name="payment" id="3" value="Наличными" required><label for="3">Наличными
+                            при
+                            получении</label> <br>
+                        <input type="radio" name="payment" id="4" value="Карта"><label for="4" required>Кредитной картой
+                            (Visa,
+                            Mastercard)</label> <br>
+                        <input type="radio" name="payment" id="5" value="Каспи" required><label for="5">Оплата Kaspi
+                            (запомните
+                            итоговую сумму)</label> <br>
+                        <button type="submit" class="order">Заказать вкусный кофе</button>
+                    </div>
                 </div>
-
-                <div class="method">
-                    <h3>Payment method:</h3>
-                    <input type="radio" name="payment" id="3" value="Наличными"><label for="3">Наличными при
-                        получении</label> <br>
-                    <input type="radio" name="payment" id="4" value="Карта"><label for="4">Кредитной картой (Visa,
-                        Mastercard)</label> <br>
-                    <input type="radio" name="payment" id="5" value="Каспи"><label for="5">Оплата Kaspi (запомните
-                        итоговую сумму)</label> <br>
-                    <button class="order">Заказать вкусный кофе</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
-    <?php
-    ?>
 
     <div class="preview">
         <div class="prewrapper">
             <div class="text">Зерновой и молотый кофе всегда самой свежей обжарки с доставкой до двери.</div>
-            <a href="" class="prebutton">ПЕРЕЙТИ К ВЫБОРУ КОФЕ</a>
+            <a href="#cof" class="prebutton">ПЕРЕЙТИ К ВЫБОРУ КОФЕ</a>
             <div class="text1">Вынуждены сообщить что у нас поменялся прайс в связи с повышением курса доллара, общим
                 дефицитом арабики и повышением цен на зеленый кофе.</div>
         </div>
 
     </div>
 
-    <div class="mlabel">Моносорта</div>
+    <div id="cof" class="mlabel">Моносорта</div>
 
     <div class="magazine">
 
@@ -271,7 +247,7 @@ if (isset($_POST['add_to_cart'])) {
     <footer>
         <ul>
             <li><a href="../AboutUs/aboutUs.html">О нас</a></li>
-            <li><a href="">Кофе</a></li>
+            <li><a href="#">Кофе</a></li>
             <li><a href="../Equipment/equipment.html">Оборудование</a></li>
             <li><a href="">Академия Coffeelogia</a></li>
             <li><a href="../Contacts/contacts.html">Контакты</a></li>

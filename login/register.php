@@ -11,10 +11,17 @@ if ($link === false) {
 $name = $_POST['name'];
 $number = $_POST['number'];
 $pass = $_POST['pass'];
+$sql = "select * from users where tel_number = '" . $number . "'";
+$result = $link->query($sql);
+if($result->num_rows>0) {
+    echo 'false';
+    die();
+}
+
 $sql = "insert into users (name,password,tel_number) values('" . $name . "','" . $pass . "','" . $number . "')";
 $result = mysqli_query($link, $sql);
 if ($result) {
-    echo "Success!";
+    echo "true";
     exit();
 } else
     echo mysqli_error($link);

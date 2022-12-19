@@ -21,7 +21,14 @@ function registration(form){
         data: { number,name,pass},
         success: (result) => {
             console.log(result);
-            window.location.replace("../AboutUs/aboutUs.html");
+            if(result=='true'){
+                setCookie('number',number,20);
+                window.location.replace("../AboutUs/aboutUs.html");
+            }
+            else {
+                window.alert("Number is taken by another user!");
+                location.reload();
+            }
         },
         error: () => {
             console.log('error');
@@ -38,9 +45,14 @@ function login(form){
         data: { number,pass},
         success: (result) => {
             console.log(result);
-            setCookie('number',number,20);
-            setCookie('pass',pass,20);
-            window.location.replace("../AboutUs/aboutUs.html");
+            if(result=='true'){
+                setCookie('number',number,20);
+                window.location.replace("../AboutUs/aboutUs.html");
+            }
+            else {
+                window.alert("Your number or password is incorrect!");
+                location.reload();
+            }
         },
         error: () => {
             console.log('error');

@@ -103,7 +103,7 @@
     position: fixed;
     cursor: pointer;
     right: 50px;
-    display: flex;
+    display: none;
     top: 50px;
     width: 60px;
     height: 60px;
@@ -281,7 +281,8 @@
 }
 
 .cartm{
-    width: 40%;
+    width: 100%;
+    max-width: 580px;
     z-index: 102;
     height: fit-content;
     padding: 40px 20px;
@@ -332,13 +333,14 @@
 }
 
 .product-name{
+    display: inline;
+    padding-right: 100px;
 }
 
 .total{
     display: flex;
     justify-content: flex-end;
-    margin-right: 200px;
-    padding-top: 20px;
+    align-items: center;
 }
 
 .data{
@@ -349,11 +351,13 @@
 }
 
 .main select, .main textarea{
-    width: 100%;
+    width: 90%;
     height: 50px;
     border: 1px solid orange;
     border-radius: 15px;
+    display: block;
     margin: 10px 0;
+    padding: 0 10px;
 }
 
 .address, .method{
@@ -381,8 +385,9 @@
 .order{
     width: 50%;
     height: 50px;
-    padding: 0;
-    margin: 15px 0;
+    padding: 0 auto;
+    margin: 15px auto;
+    cursor: pointer;
     background-color: orange;
     color: #000;
     border-radius: 10px;
@@ -415,13 +420,6 @@ footer a {
 @media (max-width: 960px) {
     .item{
         max-width: 50%;
-    }
-    .item *:not(:last-child){
-        margin-right: 20px;
-    }
-    .magazine{
-        flex-wrap: nowrap;
-        overflow-x: auto;
     }
 
     body.lock {
