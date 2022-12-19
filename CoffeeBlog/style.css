@@ -14,6 +14,14 @@ body{
     /* background-color: #fff; */
 }
 
+body { 
+    width: 100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
+}
+
 .head {
     position: fixed;
     top: 0;
@@ -54,9 +62,8 @@ body{
 }
 
 .navbar {
-    width: 60%;
     margin: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .navbar ul {
@@ -268,7 +275,7 @@ video{
     transform: scale(0);
 }
 
-.popup-screen:active{
+.popup-screen-active{
     transform: scale(1);
 }
 
@@ -520,6 +527,7 @@ footer a {
         left: 10px;
         margin-top: 400px;
         height: 500px;
+        padding: 0;
     }
 
     .content h1{
