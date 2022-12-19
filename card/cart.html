@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="cart">
+            <h2>Orders</h2>
+
+            <div class="product">
+                <img src="../images/1.png" style="width: 100px;" alt="">
+                <div class="product-name">
+                    <h4>Something</h3>
+                    <p>Weight:</p>
+                    <p>Grind:</p>
+                </div>
+
+                <div class="count">
+                    <button class="decrease">-</button>
+                    <h5>2</h5>
+                    <button class="increase">+</button>
+                </div>
+
+                <div class="sum">6000tg
+                    <button> X </button>
+                </div>                
+            </div>
+
+            <div class="total">Total:</div>
+
+
+            <div class="data">
+                <h3>City:</h3>
+                <select name="city" id="">
+                    <option value="Алматы">Алматы</option>
+                    <option value="Атырау">Атырау</option>
+                    <option value="Астана">Астана</option>
+                    <option value="Шымкент">Шымкент</option>
+                    <option value="Актау">Актау</option>
+                    <option value="Павлодар">Павлодар</option>
+                    <option value="Талдыкорган">Талдыкорган</option>
+                    <option value="Карагынды">Карагaнды</option>
+                </select>
+
+                
+                <div class="address">
+                    <h3>Address:</h3>
+                    <textarea name="address" id="" cols="30" rows="5"></textarea>
+                    <input type="radio" name="delivery" id="1" value="Самывывоз"><label for="1">Самывывоз</label> <br>
+                    <input type="radio" name="delivery" id="2" value="Доставка"><label for="2">Доставка(1000тг)</label> 
+                </div>
+
+                <div class="method">
+                <h3>Payment method:</h3>
+                <input type="radio" name="payment" id="3" value="Наличными"><label for="3">Наличными при получении</label> <br>
+                <input type="radio" name="payment" id="4" value="Карта"><label for="4">Кредитной картой (Visa, Mastercard)</label> <br>
+                <input type="radio" name="payment" id="5" value="Каспи"><label for="5">Оплата Kaspi (запомните итоговую сумму)</label> <br>
+                <button class="order">Заказать вкусный кофе</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

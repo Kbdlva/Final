@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ $(document).ready(function(){
     $('.header_burger').click(function(event){
         $('.header_burger').toggleClass('active');
         $('.navbar').toggleClass('active');
@@ -30,7 +30,7 @@ var sliderNav = function(manual){
     btns[manual].classList.add("active");
     slides[manual].classList.add("active");
     contents[manual].classList.add("active");
-
+    
 }
 
 
