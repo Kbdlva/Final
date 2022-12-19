@@ -110,7 +110,7 @@ body {
 
 .popup {
     position: fixed;
-    top: 90vh;
+    top: 80vh;
     right: 2rem;
     display: flex;
     width: 300px;
@@ -147,10 +147,9 @@ body {
 }
 
 
-
 .sent_content {
     position: absolute;
-    top: 10%;
+    top: 7%;
     left: 40%;
     background-color: #fff;
     width: 300px;
