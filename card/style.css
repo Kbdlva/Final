@@ -12,7 +12,8 @@
 }
 
 .cart{
-    width: 40%;
+    position: relative;
+    width: 580px;
     height: 100%;
     padding: 40px 20px;
     display: block;
@@ -26,7 +27,7 @@
 
 .product{
     display: flex;
-    width: 90%;
+    width: 500px;
     height: 100px;
     vertical-align: middle;
     padding: 25px 30px;
@@ -65,9 +66,11 @@ button{
 
 .total{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: flex-end;
     margin-right: 200px;
-    padding-top: 20px;
+    padding-top: 20px; */
 }
 
 .data{
@@ -77,12 +80,13 @@ button{
     margin-top: 50px;
 }
 
-select, textarea{
-    width: 100%;
+select{
+    width: 540px;
     height: 50px;
     border: 1px solid orange;
     border-radius: 15px;
     margin: 10px 0;
+    padding: 0 10px;
 }
 
 .address, .method{
@@ -99,7 +103,13 @@ select, textarea{
 }
 
 textarea{
-    height: 70px;
+    height: 60px;
+    width: 520px;
+    /* height: 50px; */
+    border: 1px solid orange;
+    border-radius: 15px;
+    margin: 10px 0;
+    padding: 0 10px;
 }
 
 .method{
@@ -108,13 +118,14 @@ textarea{
 }
 
 .order{
-    width: 50%;
-    height: 50px;
-    padding: 0;
+    width: 250px;
+    height: 40px;
+    padding: 0 15px;
     margin: 15px 0;
     background-color: orange;
     color: #000;
     border-radius: 10px;
     font-size: 20px;
     text-align: center;
+    border: none;
 }
